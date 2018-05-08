@@ -24,15 +24,31 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Ubuntu-B.ttf</string>
+		<string>Ubuntu-BI.ttf</string>
+		<string>Ubuntu-C.ttf</string>
+		<string>Ubuntu-L.ttf</string>
+		<string>Ubuntu-LI.ttf</string>
+		<string>Ubuntu-M.ttf</string>
+		<string>Ubuntu-MI.ttf</string>
+		<string>Ubuntu-R.ttf</string>
+		<string>Ubuntu-RI.ttf</string>
+		<string>UbuntuMono-B.ttf</string>
+		<string>UbuntuMono-BI.ttf</string>
+		<string>UbuntuMono-R.ttf</string>
+		<string>UbuntuMono-RI.ttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,5 +57,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
