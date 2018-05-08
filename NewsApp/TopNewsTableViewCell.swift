@@ -10,6 +10,7 @@ import UIKit
 
 class TopNewsTableViewCell: UITableViewCell {
 
+    @IBOutlet var CellView: UIView!
     @IBOutlet var imgNews: UIImageView!
     @IBOutlet var lblNewsHeading: UILabel!
     @IBOutlet var lblWriter: UILabel!

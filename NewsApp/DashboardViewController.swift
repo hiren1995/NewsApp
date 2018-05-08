@@ -13,6 +13,13 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     @IBOutlet var DashBoardTableView: UITableView!
     
+    var categories = ["Life Style","Business","Politics","Entertainment","Culture and Religion","Technology","Social","Sports","Regional"]
+    var categoriesImg = ["life_style","business","politics","entertainment","culture_and_religion","technology","social","sports","regional"]
+    var topnews = ["The World Global Warming Annual Summit","US President inaugrations help in Washington","Spotlight on Medtech Outsourcing and Innovation","The World Global Warming Annual Summit","US President inaugrations help in Washington","Spotlight on Medtech Outsourcing and Innovation"]
+    var newsWriter = ["Michael Adams","Roy Montago","Michael Adams","Michael Adams","Roy Montago","Michael Adams"]
+    var newstime = ["15 min","1 hour","2 hour","15 min","1 hour","2 hour"]
+    var newsimg = ["global_warming","globe","global_warming","globe","global_warming","globe"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +30,7 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return topnews.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,6 +44,7 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
             
             cell.CategoriesCollectionView.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
 
+            cell.selectionStyle = .none
             
             return cell
             
@@ -45,12 +53,21 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
         {
             let cell = Bundle.main.loadNibNamed("TopNewsHeaderTableViewCell", owner: self, options: nil)?.first as! TopNewsHeaderTableViewCell
             
+            cell.selectionStyle = .none
+            
             return cell
         }
         else
         {
             let cell = Bundle.main.loadNibNamed("TopNewsTableViewCell", owner: self, options: nil)?.first as! TopNewsTableViewCell
             
+            cell.CellView.ShadowAllBorders()
+            cell.lblNewsHeading.text = topnews[indexPath.row - 2]
+            cell.imgNews.image = UIImage(named: newsimg[indexPath.row - 2])
+            cell.lblWriter.text = newsWriter[indexPath.row - 2]
+            cell.lblTime.text = newstime[indexPath.row - 2]
+            
+            cell.selectionStyle = .none
             return cell
         }
         
@@ -73,13 +90,16 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let collectioncell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CategoriesCollectionViewCell
        
+        collectioncell.lblCategory.text = categories[indexPath.row]
+        collectioncell.imgCategory.image = UIImage(named: categoriesImg[indexPath.row])
+        
         return collectioncell
     }
     
