@@ -35,6 +35,10 @@
 		18C149E120A195CA004849DA /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C149DF20A195CA004849DA /* CategoriesTableViewCell.xib */; };
 		18C149E820A19AEE004849DA /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C149E620A19AEE004849DA /* CategoriesCollectionViewCell.swift */; };
 		18C149E920A19AEE004849DA /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C149E720A19AEE004849DA /* CategoriesCollectionViewCell.xib */; };
+		18C149EC20A1ADCE004849DA /* TopNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C149EA20A1ADCE004849DA /* TopNewsTableViewCell.swift */; };
+		18C149ED20A1ADCE004849DA /* TopNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C149EB20A1ADCE004849DA /* TopNewsTableViewCell.xib */; };
+		18C149F020A1B617004849DA /* TopNewsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C149EE20A1B617004849DA /* TopNewsHeaderTableViewCell.swift */; };
+		18C149F120A1B617004849DA /* TopNewsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C149EF20A1B617004849DA /* TopNewsHeaderTableViewCell.xib */; };
 		4D3CDC2D44E055B3B5A2EE41 /* Pods_NewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD75A2B6A62EAF67E30C115 /* Pods_NewsAppTests.framework */; };
 		EF1009E261C7E919C5434491 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF05DE8A569F15726F02F96E /* Pods_NewsApp.framework */; };
 		F152F833AF70884FEBD42A1A /* Pods_NewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B73CB5B323DFA183A0442E /* Pods_NewsAppUITests.framework */; };
@@ -94,6 +98,10 @@
 		18C149DF20A195CA004849DA /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		18C149E620A19AEE004849DA /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		18C149E720A19AEE004849DA /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		18C149EA20A1ADCE004849DA /* TopNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsTableViewCell.swift; sourceTree = "<group>"; };
+		18C149EB20A1ADCE004849DA /* TopNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopNewsTableViewCell.xib; sourceTree = "<group>"; };
+		18C149EE20A1B617004849DA /* TopNewsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		18C149EF20A1B617004849DA /* TopNewsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopNewsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		21B59A81562702072255B655 /* Pods-NewsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppTests/Pods-NewsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E33F0EC38D0DF562301AE5C /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		7AD75A2B6A62EAF67E30C115 /* Pods_NewsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +175,10 @@
 				18C149DF20A195CA004849DA /* CategoriesTableViewCell.xib */,
 				18C149E620A19AEE004849DA /* CategoriesCollectionViewCell.swift */,
 				18C149E720A19AEE004849DA /* CategoriesCollectionViewCell.xib */,
+				18C149EA20A1ADCE004849DA /* TopNewsTableViewCell.swift */,
+				18C149EB20A1ADCE004849DA /* TopNewsTableViewCell.xib */,
+				18C149EE20A1B617004849DA /* TopNewsHeaderTableViewCell.swift */,
+				18C149EF20A1B617004849DA /* TopNewsHeaderTableViewCell.xib */,
 				18C1498A20A16BB2004849DA /* Main.storyboard */,
 				18C1498D20A16BB4004849DA /* Assets.xcassets */,
 				18C1498F20A16BB4004849DA /* LaunchScreen.storyboard */,
@@ -357,6 +369,7 @@
 				18C149E920A19AEE004849DA /* CategoriesCollectionViewCell.xib in Resources */,
 				18C149C720A17542004849DA /* Ubuntu-C.ttf in Resources */,
 				18C149C820A17542004849DA /* Ubuntu-L.ttf in Resources */,
+				18C149ED20A1ADCE004849DA /* TopNewsTableViewCell.xib in Resources */,
 				18C149C920A17542004849DA /* Ubuntu-LI.ttf in Resources */,
 				18C149CA20A17542004849DA /* Ubuntu-M.ttf in Resources */,
 				18C149CB20A17542004849DA /* Ubuntu-MI.ttf in Resources */,
@@ -366,6 +379,7 @@
 				18C149CE20A17542004849DA /* UbuntuMono-B.ttf in Resources */,
 				18C149CF20A17542004849DA /* UbuntuMono-BI.ttf in Resources */,
 				18C149D020A17542004849DA /* UbuntuMono-R.ttf in Resources */,
+				18C149F120A1B617004849DA /* TopNewsHeaderTableViewCell.xib in Resources */,
 				18C149D120A17542004849DA /* UbuntuMono-RI.ttf in Resources */,
 				18C1499120A16BB4004849DA /* LaunchScreen.storyboard in Resources */,
 				18C1498E20A16BB4004849DA /* Assets.xcassets in Resources */,
@@ -477,6 +491,8 @@
 				18C1498720A16BB2004849DA /* AppDelegate.swift in Sources */,
 				18C149E020A195CA004849DA /* CategoriesTableViewCell.swift in Sources */,
 				18C149D520A1844F004849DA /* SlidingViewController.swift in Sources */,
+				18C149F020A1B617004849DA /* TopNewsHeaderTableViewCell.swift in Sources */,
+				18C149EC20A1ADCE004849DA /* TopNewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,9 +41,15 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
             return cell
             
         }
+        else if(indexPath.row == 1)
+        {
+            let cell = Bundle.main.loadNibNamed("TopNewsHeaderTableViewCell", owner: self, options: nil)?.first as! TopNewsHeaderTableViewCell
+            
+            return cell
+        }
         else
         {
-            let cell = Bundle.main.loadNibNamed("CategoriesTableViewCell", owner: self, options: nil)?.first as! CategoriesTableViewCell
+            let cell = Bundle.main.loadNibNamed("TopNewsTableViewCell", owner: self, options: nil)?.first as! TopNewsTableViewCell
             
             return cell
         }
@@ -54,9 +60,14 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
         if (indexPath.row == 0) {
             return 180
         }
+            else if(indexPath.row == 1)
+        {
+            return 60
+        }
         else
         {
-            return 0
+            return 135
+            
         }
     }
 
@@ -76,18 +87,19 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
         return CGSize(width: 120, height: 120)
     }
 
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func btnMenu(_ sender: UIButton) {
         
         let slidemenu = self.slideMenuController()
         
         slidemenu?.openLeft()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
     
     /*
     // MARK: - Navigation
