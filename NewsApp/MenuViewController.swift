@@ -34,7 +34,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = MenuTableView.dequeueReusableCell(withIdentifier: "menuTableViewCell", for: indexPath) as! MenuTableViewCell
         
         cell.lblCellName.text = menuitems[indexPath.row]
-        
+       
         return cell
     }
     
