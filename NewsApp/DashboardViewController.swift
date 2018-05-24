@@ -73,6 +73,17 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if(indexPath.row != 0 && indexPath.row != 1)
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newsDetailViewController = storyboard.instantiateViewController(withIdentifier: "newsDetailViewController") as! NewsDetailViewController
+            
+            self.present(newsDetailViewController, animated: true, completion: nil)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.row == 0) {
             return 180

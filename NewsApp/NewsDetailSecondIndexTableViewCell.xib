@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-M.ttf">
+            <string>Ubuntu-Medium</string>
+        </array>
+        <array key="Ubuntu-R.ttf">
+            <string>Ubuntu</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="174" id="KGk-i7-Jjw" customClass="NewsDetailSecondIndexTableViewCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="173.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czO-dg-GAZ">
+                        <rect key="frame" x="16" y="0.0" width="343" height="50"/>
+                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="xVR-n6-dPD">
+                        <rect key="frame" x="16" y="143" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="AIx-Z9-lvg"/>
+                            <constraint firstAttribute="height" constant="20" id="U1q-30-hL1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0g-o8-wI8">
+                        <rect key="frame" x="44" y="143" width="315" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="YOD-k9-5bQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gc0-Lj-qEb">
+                        <rect key="frame" x="16" y="60" width="343" height="53"/>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="20"/>
+                        <color key="textColor" white="0.56173735119047608" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xVR-n6-dPD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5gt-md-9hF"/>
+                    <constraint firstItem="Gc0-Lj-qEb" firstAttribute="top" secondItem="czO-dg-GAZ" secondAttribute="bottom" constant="10" id="JQb-dj-Ofr"/>
+                    <constraint firstItem="czO-dg-GAZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="N8J-kB-fgx"/>
+                    <constraint firstAttribute="bottom" secondItem="xVR-n6-dPD" secondAttribute="bottom" constant="10.5" id="Nk6-Uo-QmI"/>
+                    <constraint firstItem="Gc0-Lj-qEb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="QDh-6U-EJl"/>
+                    <constraint firstAttribute="trailing" secondItem="czO-dg-GAZ" secondAttribute="trailing" constant="16" id="bIs-Zv-Qwv"/>
+                    <constraint firstAttribute="trailing" secondItem="G0g-o8-wI8" secondAttribute="trailing" constant="16" id="ckt-1Y-i3T"/>
+                    <constraint firstAttribute="trailing" secondItem="Gc0-Lj-qEb" secondAttribute="trailing" constant="16" id="oCC-hq-TFW"/>
+                    <constraint firstItem="G0g-o8-wI8" firstAttribute="top" secondItem="Gc0-Lj-qEb" secondAttribute="bottom" constant="30" id="oY0-e3-vQM"/>
+                    <constraint firstItem="G0g-o8-wI8" firstAttribute="leading" secondItem="xVR-n6-dPD" secondAttribute="trailing" constant="8" id="qHh-yT-5Fz"/>
+                    <constraint firstItem="czO-dg-GAZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rar-AV-xbP"/>
+                    <constraint firstAttribute="bottom" secondItem="G0g-o8-wI8" secondAttribute="bottom" constant="10.5" id="x5d-6Z-Boq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblNews" destination="Gc0-Lj-qEb" id="JSi-2M-wMS"/>
+                <outlet property="lblNewsTitle" destination="czO-dg-GAZ" id="xgI-u0-kfL"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="117"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar" width="64" height="64"/>
+    </resources>
+</document>
