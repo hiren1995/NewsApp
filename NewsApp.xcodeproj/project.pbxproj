@@ -45,6 +45,12 @@
 		18C149ED20A1ADCE004849DA /* TopNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C149EB20A1ADCE004849DA /* TopNewsTableViewCell.xib */; };
 		18C149F020A1B617004849DA /* TopNewsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C149EE20A1B617004849DA /* TopNewsHeaderTableViewCell.swift */; };
 		18C149F120A1B617004849DA /* TopNewsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C149EF20A1B617004849DA /* TopNewsHeaderTableViewCell.xib */; };
+		18D1661020B8052400383706 /* NewsListFirstIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1660E20B8052400383706 /* NewsListFirstIndexTableViewCell.swift */; };
+		18D1661120B8052400383706 /* NewsListFirstIndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D1660F20B8052400383706 /* NewsListFirstIndexTableViewCell.xib */; };
+		18D1661620B809FF00383706 /* NewsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1661420B809FF00383706 /* NewsListCollectionViewCell.swift */; };
+		18D1661720B809FF00383706 /* NewsListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D1661520B809FF00383706 /* NewsListCollectionViewCell.xib */; };
+		18D1661C20B814D400383706 /* NewsListSecondIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1661A20B814D400383706 /* NewsListSecondIndexTableViewCell.swift */; };
+		18D1661D20B814D400383706 /* NewsListSecondIndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D1661B20B814D400383706 /* NewsListSecondIndexTableViewCell.xib */; };
 		4D3CDC2D44E055B3B5A2EE41 /* Pods_NewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD75A2B6A62EAF67E30C115 /* Pods_NewsAppTests.framework */; };
 		EF1009E261C7E919C5434491 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF05DE8A569F15726F02F96E /* Pods_NewsApp.framework */; };
 		F152F833AF70884FEBD42A1A /* Pods_NewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B73CB5B323DFA183A0442E /* Pods_NewsAppUITests.framework */; };
@@ -114,6 +120,12 @@
 		18C149EB20A1ADCE004849DA /* TopNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopNewsTableViewCell.xib; sourceTree = "<group>"; };
 		18C149EE20A1B617004849DA /* TopNewsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		18C149EF20A1B617004849DA /* TopNewsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopNewsHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		18D1660E20B8052400383706 /* NewsListFirstIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListFirstIndexTableViewCell.swift; sourceTree = "<group>"; };
+		18D1660F20B8052400383706 /* NewsListFirstIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListFirstIndexTableViewCell.xib; sourceTree = "<group>"; };
+		18D1661420B809FF00383706 /* NewsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		18D1661520B809FF00383706 /* NewsListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListCollectionViewCell.xib; sourceTree = "<group>"; };
+		18D1661A20B814D400383706 /* NewsListSecondIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListSecondIndexTableViewCell.swift; sourceTree = "<group>"; };
+		18D1661B20B814D400383706 /* NewsListSecondIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListSecondIndexTableViewCell.xib; sourceTree = "<group>"; };
 		21B59A81562702072255B655 /* Pods-NewsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppTests/Pods-NewsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E33F0EC38D0DF562301AE5C /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		7AD75A2B6A62EAF67E30C115 /* Pods_NewsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +209,12 @@
 				18BBB8A920B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.swift */,
 				18BBB8AA20B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.xib */,
 				18BBB8AD20B6DD3600D2DE28 /* NewsListViewController.swift */,
+				18D1660E20B8052400383706 /* NewsListFirstIndexTableViewCell.swift */,
+				18D1660F20B8052400383706 /* NewsListFirstIndexTableViewCell.xib */,
+				18D1661420B809FF00383706 /* NewsListCollectionViewCell.swift */,
+				18D1661520B809FF00383706 /* NewsListCollectionViewCell.xib */,
+				18D1661A20B814D400383706 /* NewsListSecondIndexTableViewCell.swift */,
+				18D1661B20B814D400383706 /* NewsListSecondIndexTableViewCell.xib */,
 				18C1498A20A16BB2004849DA /* Main.storyboard */,
 				18C1498D20A16BB4004849DA /* Assets.xcassets */,
 				18C1498F20A16BB4004849DA /* LaunchScreen.storyboard */,
@@ -382,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D1661D20B814D400383706 /* NewsListSecondIndexTableViewCell.xib in Resources */,
 				18C149C520A17542004849DA /* Ubuntu-B.ttf in Resources */,
 				18C149C620A17542004849DA /* Ubuntu-BI.ttf in Resources */,
 				18BBB8AC20B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.xib in Resources */,
@@ -389,6 +408,7 @@
 				18C149C720A17542004849DA /* Ubuntu-C.ttf in Resources */,
 				18C149C820A17542004849DA /* Ubuntu-L.ttf in Resources */,
 				18C149ED20A1ADCE004849DA /* TopNewsTableViewCell.xib in Resources */,
+				18D1661120B8052400383706 /* NewsListFirstIndexTableViewCell.xib in Resources */,
 				18C149C920A17542004849DA /* Ubuntu-LI.ttf in Resources */,
 				18C149CA20A17542004849DA /* Ubuntu-M.ttf in Resources */,
 				18C149CB20A17542004849DA /* Ubuntu-MI.ttf in Resources */,
@@ -396,6 +416,7 @@
 				18C149CD20A17542004849DA /* Ubuntu-RI.ttf in Resources */,
 				18C149E120A195CA004849DA /* CategoriesTableViewCell.xib in Resources */,
 				18C149CE20A17542004849DA /* UbuntuMono-B.ttf in Resources */,
+				18D1661720B809FF00383706 /* NewsListCollectionViewCell.xib in Resources */,
 				18C149CF20A17542004849DA /* UbuntuMono-BI.ttf in Resources */,
 				18C149D020A17542004849DA /* UbuntuMono-R.ttf in Resources */,
 				18C149F120A1B617004849DA /* TopNewsHeaderTableViewCell.xib in Resources */,
@@ -508,7 +529,9 @@
 				18C149E820A19AEE004849DA /* CategoriesCollectionViewCell.swift in Sources */,
 				18BBB8AE20B6DD3600D2DE28 /* NewsListViewController.swift in Sources */,
 				18C149DD20A1885C004849DA /* MenuTableViewCell.swift in Sources */,
+				18D1661C20B814D400383706 /* NewsListSecondIndexTableViewCell.swift in Sources */,
 				18C149D720A18521004849DA /* MenuViewController.swift in Sources */,
+				18D1661620B809FF00383706 /* NewsListCollectionViewCell.swift in Sources */,
 				18C1498720A16BB2004849DA /* AppDelegate.swift in Sources */,
 				18BBB8A420B6B38000D2DE28 /* NewsDetailViewController.swift in Sources */,
 				18C149E020A195CA004849DA /* CategoriesTableViewCell.swift in Sources */,
@@ -516,6 +539,7 @@
 				18C149D520A1844F004849DA /* SlidingViewController.swift in Sources */,
 				18BBB8A720B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.swift in Sources */,
 				18C149F020A1B617004849DA /* TopNewsHeaderTableViewCell.swift in Sources */,
+				18D1661020B8052400383706 /* NewsListFirstIndexTableViewCell.swift in Sources */,
 				18C149EC20A1ADCE004849DA /* TopNewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

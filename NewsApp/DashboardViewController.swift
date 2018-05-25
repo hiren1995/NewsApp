@@ -75,12 +75,24 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if(indexPath.row != 0 && indexPath.row != 1)
+        if(indexPath.row == 0)
+        {
+            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //let NewsListViewController = storyboard.instantiateViewController(withIdentifier: "newsListViewController") as! NewsListViewController
+            
+            //self.present(NewsListViewController, animated: true, completion: nil)
+        }
+        else if(indexPath.row == 1)
+        {
+            
+        }
+        else
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newsDetailViewController = storyboard.instantiateViewController(withIdentifier: "newsDetailViewController") as! NewsDetailViewController
             
             self.present(newsDetailViewController, animated: true, completion: nil)
+            
         }
     }
     
@@ -112,6 +124,15 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
         collectioncell.imgCategory.image = UIImage(named: categoriesImg[indexPath.row])
         
         return collectioncell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let NewsListViewController = storyboard.instantiateViewController(withIdentifier: "newsListViewController") as! NewsListViewController
+        
+        self.present(NewsListViewController, animated: true, completion: nil)
+        
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
