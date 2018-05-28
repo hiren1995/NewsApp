@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1803570920BBF65B00628DBA /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803570820BBF65B00628DBA /* CategoryViewController.swift */; };
+		1803570D20BC017600628DBA /* CategoryListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803570C20BC017600628DBA /* CategoryListCollectionViewCell.swift */; };
 		18BBB8A420B6B38000D2DE28 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBB8A320B6B38000D2DE28 /* NewsDetailViewController.swift */; };
 		18BBB8A720B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBB8A520B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.swift */; };
 		18BBB8A820B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBB8A620B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.xib */; };
@@ -76,6 +78,8 @@
 /* Begin PBXFileReference section */
 		10B73CB5B323DFA183A0442E /* Pods_NewsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13452FD901E3DA3EF011248D /* Pods-NewsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsAppUITests/Pods-NewsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1803570820BBF65B00628DBA /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		1803570C20BC017600628DBA /* CategoryListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCollectionViewCell.swift; sourceTree = "<group>"; };
 		18BBB8A320B6B38000D2DE28 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		18BBB8A520B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailFirstIndexTableViewCell.swift; sourceTree = "<group>"; };
 		18BBB8A620B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailFirstIndexTableViewCell.xib; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				18D1661520B809FF00383706 /* NewsListCollectionViewCell.xib */,
 				18D1661A20B814D400383706 /* NewsListSecondIndexTableViewCell.swift */,
 				18D1661B20B814D400383706 /* NewsListSecondIndexTableViewCell.xib */,
+				1803570820BBF65B00628DBA /* CategoryViewController.swift */,
+				1803570C20BC017600628DBA /* CategoryListCollectionViewCell.swift */,
 				18C1498A20A16BB2004849DA /* Main.storyboard */,
 				18C1498D20A16BB4004849DA /* Assets.xcassets */,
 				18C1498F20A16BB4004849DA /* LaunchScreen.storyboard */,
@@ -528,6 +534,7 @@
 				18C149DB20A185BF004849DA /* DashboardViewController.swift in Sources */,
 				18C149E820A19AEE004849DA /* CategoriesCollectionViewCell.swift in Sources */,
 				18BBB8AE20B6DD3600D2DE28 /* NewsListViewController.swift in Sources */,
+				1803570D20BC017600628DBA /* CategoryListCollectionViewCell.swift in Sources */,
 				18C149DD20A1885C004849DA /* MenuTableViewCell.swift in Sources */,
 				18D1661C20B814D400383706 /* NewsListSecondIndexTableViewCell.swift in Sources */,
 				18C149D720A18521004849DA /* MenuViewController.swift in Sources */,
@@ -540,6 +547,7 @@
 				18BBB8A720B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.swift in Sources */,
 				18C149F020A1B617004849DA /* TopNewsHeaderTableViewCell.swift in Sources */,
 				18D1661020B8052400383706 /* NewsListFirstIndexTableViewCell.swift in Sources */,
+				1803570920BBF65B00628DBA /* CategoryViewController.swift in Sources */,
 				18C149EC20A1ADCE004849DA /* TopNewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

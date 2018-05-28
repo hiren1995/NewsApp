@@ -56,6 +56,11 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgNews" destination="wfd-nP-ae9" id="SCz-P1-9kK"/>
+                <outlet property="lblNewsDate" destination="w4D-RP-xvl" id="y1k-4r-e1j"/>
+                <outlet property="lblNewsTitle" destination="fKh-hn-kra" id="GAb-4p-KC5"/>
+            </connections>
             <point key="canvasLocation" x="24.5" y="105"/>
         </tableViewCell>
     </objects>

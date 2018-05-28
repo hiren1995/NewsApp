@@ -10,8 +10,11 @@ import UIKit
 
 class NewsListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource{
     
-    
     @IBOutlet var NewsListTableView: UITableView!
+    
+    var images = ["congrats_bg","cover_image"]
+    var news = ["Testing News Demo 1","Testing News Demo 2"]
+    var dates = ["28 May","29 May"]
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class NewsListViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return news.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,6 +37,7 @@ class NewsListViewController: UIViewController,UITableViewDelegate,UITableViewDa
             
             cell.NewsListCollectionView.delegate = self
             cell.NewsListCollectionView.dataSource = self
+            cell.NewsListCollectionView.isPagingEnabled = true
             
             cell.NewsListCollectionView.register(UINib(nibName: "NewsListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionCell")
             
@@ -46,6 +50,11 @@ class NewsListViewController: UIViewController,UITableViewDelegate,UITableViewDa
             let cell = Bundle.main.loadNibNamed("NewsListSecondIndexTableViewCell", owner: self, options: nil)?.first as! NewsListSecondIndexTableViewCell
             
             
+            cell.selectionStyle = .none
+            
+            cell.imgNews.image = UIImage(named: images[indexPath.row - 1])
+            cell.lblNewsTitle.text = news[indexPath.row - 1]
+            cell.lblNewsDate.text = dates[indexPath.row - 1]
             
             return cell
         }
@@ -66,7 +75,9 @@ class NewsListViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        //return 5
+        
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,10 +85,20 @@ class NewsListViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let collectioncell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! NewsListCollectionViewCell
         
        
+        collectioncell.imgNews.image = UIImage(named: images[indexPath.row])
+        collectioncell.titleNews.text = news[indexPath.row]
+        
         return collectioncell
     }
     
-
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        //return CGSize(width: 120, height: 120)
+        
+        return UICollectionViewFlowLayoutAutomaticSize
+    }
+ 
     
     
     override func didReceiveMemoryWarning() {

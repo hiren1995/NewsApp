@@ -9,9 +9,10 @@
 import UIKit
 
 class CategoriesCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet var imgCategory: UIImageView!
     @IBOutlet var lblCategory: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -10,6 +10,9 @@ import UIKit
 
 class NewsListSecondIndexTableViewCell: UITableViewCell {
 
+    @IBOutlet var imgNews: UIImageView!
+    @IBOutlet var lblNewsTitle: UILabel!
+    @IBOutlet var lblNewsDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

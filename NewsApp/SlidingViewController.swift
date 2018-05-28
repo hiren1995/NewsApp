@@ -9,6 +9,8 @@
 import UIKit
 import SlideMenuControllerSwift
 
+var SlideViewControllerFlag = 0
+
 class SlidingViewController: SlideMenuController {
 
     override func viewDidLoad() {
@@ -26,13 +28,23 @@ class SlidingViewController: SlideMenuController {
     
     override func awakeFromNib() {
         
-        
-        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "dashboardViewController") {
-            self.mainViewController = controller
+        if SlideViewControllerFlag == 0
+        {
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "dashboardViewController") {
+                self.mainViewController = controller
+            }
         }
+        else if(SlideViewControllerFlag == 1)
+        {
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "categoryViewController") {
+                self.mainViewController = controller
+            }
+        }
+        
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "menuViewController") {
             self.leftViewController = controller
         }
+        
         super.awakeFromNib()
         
     }

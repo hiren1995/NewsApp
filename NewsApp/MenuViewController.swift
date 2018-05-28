@@ -38,6 +38,19 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if(indexPath.row == 1)
+        {
+            SlideViewControllerFlag = 1
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let slidingViewController = storyboard.instantiateViewController(withIdentifier: "slidingViewController") as! SlidingViewController
+            
+            self.present(slidingViewController, animated: true, completion: nil)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55.0
         
