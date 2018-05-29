@@ -317,7 +317,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="btnMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HYa-vx-cvb"/>
+                                            <action selector="btnBack:" destination="6R2-eO-R3O" eventType="touchUpInside" id="uPQ-NV-eKP"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share_header" translatesAutoresizingMaskIntoConstraints="NO" id="PUy-Va-Bm3">

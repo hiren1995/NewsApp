@@ -75,7 +75,11 @@ class NewsDetailViewController: UIViewController,UITableViewDelegate,UITableView
         }
     }
     
-
+    @IBAction func btnBack(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
