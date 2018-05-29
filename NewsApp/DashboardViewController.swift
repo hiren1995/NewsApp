@@ -128,6 +128,8 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        btnMenuFlagNewsList = false
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let NewsListViewController = storyboard.instantiateViewController(withIdentifier: "newsListViewController") as! NewsListViewController
         

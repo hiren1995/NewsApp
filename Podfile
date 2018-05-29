@@ -8,6 +8,7 @@ target 'NewsApp' do
   # Pods for NewsApp
   
   pod 'SlideMenuControllerSwift'
+  pod "ROGoogleTranslate"
 
   target 'NewsAppTests' do
     inherit! :search_paths

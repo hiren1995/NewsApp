@@ -15,6 +15,7 @@
 		18BBB8AB20B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBB8A920B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.swift */; };
 		18BBB8AC20B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBB8AA20B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.xib */; };
 		18BBB8AE20B6DD3600D2DE28 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBB8AD20B6DD3600D2DE28 /* NewsListViewController.swift */; };
+		18C1168A20BD4A04009B2C82 /* TopNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1168920BD4A04009B2C82 /* TopNewsViewController.swift */; };
 		18C1498720A16BB2004849DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1498620A16BB2004849DA /* AppDelegate.swift */; };
 		18C1498C20A16BB2004849DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C1498A20A16BB2004849DA /* Main.storyboard */; };
 		18C1498E20A16BB4004849DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C1498D20A16BB4004849DA /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 		18BBB8A920B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailSecondIndexTableViewCell.swift; sourceTree = "<group>"; };
 		18BBB8AA20B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailSecondIndexTableViewCell.xib; sourceTree = "<group>"; };
 		18BBB8AD20B6DD3600D2DE28 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		18C1168920BD4A04009B2C82 /* TopNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsViewController.swift; sourceTree = "<group>"; };
 		18C1498320A16BB2004849DA /* ALRA NEWS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ALRA NEWS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C1498620A16BB2004849DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C1498B20A16BB2004849DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				18D1661B20B814D400383706 /* NewsListSecondIndexTableViewCell.xib */,
 				1803570820BBF65B00628DBA /* CategoryViewController.swift */,
 				1803570C20BC017600628DBA /* CategoryListCollectionViewCell.swift */,
+				18C1168920BD4A04009B2C82 /* TopNewsViewController.swift */,
 				18C1498A20A16BB2004849DA /* Main.storyboard */,
 				18C1498D20A16BB4004849DA /* Assets.xcassets */,
 				18C1498F20A16BB4004849DA /* LaunchScreen.storyboard */,
@@ -494,10 +497,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ROGoogleTranslate/ROGoogleTranslate.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ROGoogleTranslate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +548,7 @@
 				18BBB8A420B6B38000D2DE28 /* NewsDetailViewController.swift in Sources */,
 				18C149E020A195CA004849DA /* CategoriesTableViewCell.swift in Sources */,
 				18BBB8AB20B6B44500D2DE28 /* NewsDetailSecondIndexTableViewCell.swift in Sources */,
+				18C1168A20BD4A04009B2C82 /* TopNewsViewController.swift in Sources */,
 				18C149D520A1844F004849DA /* SlidingViewController.swift in Sources */,
 				18BBB8A720B6B41400D2DE28 /* NewsDetailFirstIndexTableViewCell.swift in Sources */,
 				18C149F020A1B617004849DA /* TopNewsHeaderTableViewCell.swift in Sources */,
@@ -725,10 +731,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NWJFVU6RP;
 				INFOPLIST_FILE = NewsApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.NewsApp;
 				PRODUCT_MODULE_NAME = NewsApp;
 				PRODUCT_NAME = "ALRA NEWS";
@@ -745,10 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NWJFVU6RP;
 				INFOPLIST_FILE = NewsApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.NewsApp;
 				PRODUCT_MODULE_NAME = NewsApp;
 				PRODUCT_NAME = "ALRA NEWS";
@@ -765,11 +765,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewsAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.NewsAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -786,11 +782,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewsAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.NewsAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -806,11 +798,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewsAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.NewsAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -826,11 +814,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewsAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.NewsAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -12,7 +12,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     @IBOutlet var MenuTableView: UITableView!
     
-    let menuitems = ["Dashboard","Category","Crypto News","Live Streaming","Share","Setting","Change Language","About Us","Logout"]
+    let menuitems = ["Dashboard","Category","Crypto News","Live Streaming","Real Spirituality","World Future News","Change Language","About Us"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,15 +40,38 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if(indexPath.row == 1)
+        if(indexPath.row == 0)
+        {
+            SlideViewControllerFlag = 0
+            
+        }
+        else if(indexPath.row == 1)
         {
             SlideViewControllerFlag = 1
             
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let slidingViewController = storyboard.instantiateViewController(withIdentifier: "slidingViewController") as! SlidingViewController
-            
-            self.present(slidingViewController, animated: true, completion: nil)
         }
+        else if(indexPath.row == 2)
+        {
+            SlideViewControllerFlag = 2
+        }
+        else if(indexPath.row == 4)
+        {
+            SlideViewControllerFlag = 4
+        }
+        else if(indexPath.row == 5)
+        {
+            SlideViewControllerFlag = 5
+        }
+        else
+        {
+            
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let slidingViewController = storyboard.instantiateViewController(withIdentifier: "slidingViewController") as! SlidingViewController
+        
+        self.present(slidingViewController, animated: true, completion: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

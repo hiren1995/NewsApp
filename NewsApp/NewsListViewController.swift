@@ -8,19 +8,36 @@
 
 import UIKit
 
+var btnMenuFlagNewsList = false
+
 class NewsListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource{
     
     @IBOutlet var NewsListTableView: UITableView!
+    @IBOutlet var imgNavBtn: UIImageView!
+    
     
     var images = ["congrats_bg","cover_image"]
     var news = ["Testing News Demo 1","Testing News Demo 2"]
     var dates = ["28 May","29 May"]
+    
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         NewsListTableView.delegate = self
         NewsListTableView.dataSource = self
+        
+        if btnMenuFlagNewsList
+        {
+            imgNavBtn.image = UIImage(named: "menu_options")
+            //imgNavBtn.frame = CGRect(x: 10, y: 10, width: 30, height: 30)
+        }
+        else
+        {
+            imgNavBtn.image = UIImage(named: "left_arrow")
+            //imgNavBtn.frame = CGRect(x: 16, y: 15, width: 20, height: 20)
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -98,7 +115,20 @@ class NewsListViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         return UICollectionViewFlowLayoutAutomaticSize
     }
- 
+    @IBAction func btnNav(_ sender: UIButton) {
+        
+        if btnMenuFlagNewsList
+        {
+            let slidemenu = self.slideMenuController()
+            
+            slidemenu?.openLeft()
+        }
+        else
+        {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     
     
     override func didReceiveMemoryWarning() {

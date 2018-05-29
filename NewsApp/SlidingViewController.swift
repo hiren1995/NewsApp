@@ -40,6 +40,29 @@ class SlidingViewController: SlideMenuController {
                 self.mainViewController = controller
             }
         }
+        else if(SlideViewControllerFlag == 2)
+        {
+            btnMenuFlagNewsList = true
+            
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "newsListViewController") {
+                self.mainViewController = controller
+            }
+        }
+        else if(SlideViewControllerFlag == 4)
+        {
+            fromPage = 1
+            
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "topNewsViewController") {
+                self.mainViewController = controller
+            }
+        }
+        else if(SlideViewControllerFlag == 5)
+        {
+            fromPage = 2
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "topNewsViewController") {
+                self.mainViewController = controller
+            }
+        }
         
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "menuViewController") {
             self.leftViewController = controller

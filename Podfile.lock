@@ -1,16 +1,20 @@
 PODS:
+  - ROGoogleTranslate (0.0.5)
   - SlideMenuControllerSwift (4.0.0)
 
 DEPENDENCIES:
+  - ROGoogleTranslate
   - SlideMenuControllerSwift
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - ROGoogleTranslate
     - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
+  ROGoogleTranslate: 344d579487c21af1ae54138baa68605b861ba84e
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
 
-PODFILE CHECKSUM: cc64161dfb5538f461cb1e91717e7ac1fcbe68bc
+PODFILE CHECKSUM: a85d7fb081b7ff748bb194b6f46a052e951cea42
 
 COCOAPODS: 1.5.0
