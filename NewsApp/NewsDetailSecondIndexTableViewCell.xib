@@ -73,6 +73,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="lblDate" destination="G0g-o8-wI8" id="Egd-Wn-0b1"/>
                 <outlet property="lblNews" destination="Gc0-Lj-qEb" id="JSi-2M-wMS"/>
                 <outlet property="lblNewsTitle" destination="czO-dg-GAZ" id="xgI-u0-kfL"/>
             </connections>

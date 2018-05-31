@@ -9,6 +9,7 @@
 import UIKit
 import SlideMenuControllerSwift
 
+
 var SlideViewControllerFlag = 0
 
 class SlidingViewController: SlideMenuController {
@@ -45,9 +46,16 @@ class SlidingViewController: SlideMenuController {
             btnMenuFlagNewsList = true
             
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "newsListViewController") {
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let newsListViewController = storyboard.instantiateViewController(withIdentifier: "newsListViewController") as! NewsListViewController
+                
+                newsListViewController.categoryId = 1
+                
                 self.mainViewController = controller
             }
         }
+       
         else if(SlideViewControllerFlag == 4)
         {
             fromPage = 1
@@ -60,6 +68,12 @@ class SlidingViewController: SlideMenuController {
         {
             fromPage = 2
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "topNewsViewController") {
+                self.mainViewController = controller
+            }
+        }
+        else if(SlideViewControllerFlag == 6)
+        {
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "changeLanguageViewController") {
                 self.mainViewController = controller
             }
         }

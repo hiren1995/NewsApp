@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import ROGoogleTranslate
+import AVKit
+import AVFoundation
 
 class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -33,44 +36,91 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let cell = MenuTableView.dequeueReusableCell(withIdentifier: "menuTableViewCell", for: indexPath) as! MenuTableViewCell
         
-        cell.lblCellName.text = menuitems[indexPath.row]
+        
+        print(userDefault.value(forKey: LanguageCode) as! String)
+        
+        
+        if(userDefault.value(forKey: Language) as! String == "English")
+        {
+            cell.lblCellName.text = menuitems[indexPath.row]
+        }
+        else
+        {
+            var params = ROGoogleTranslateParams(source: "en",
+                                                 target: userDefault.value(forKey: LanguageCode) as! String,
+                                                 text:   menuitems[indexPath.row])
+            
+            //let translator = ROGoogleTranslate(with: APIKey)
+            
+            let translator = ROGoogleTranslate()
+            translator.apiKey = APIKey
+            
+            translator.translate(params: params) { (result) in
+                
+                DispatchQueue.main.async {
+                    //self.translation.text = "\(result)"
+                    
+                    print("Translation: \(result)")
+                    
+                    cell.lblCellName.text = result
+                }
+                
+                //print("Translation: \(result)")
+            }
+        }
+        
+        //cell.lblCellName.text = menuitems[indexPath.row]
        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if(indexPath.row == 0)
+        
+        if(indexPath.row == 3)
         {
-            SlideViewControllerFlag = 0
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let liveVideoPlayerViewController = storyboard.instantiateViewController(withIdentifier: "liveVideoPlayerViewController") as! LiveVideoPlayerViewController
             
-        }
-        else if(indexPath.row == 1)
-        {
-            SlideViewControllerFlag = 1
-            
-        }
-        else if(indexPath.row == 2)
-        {
-            SlideViewControllerFlag = 2
-        }
-        else if(indexPath.row == 4)
-        {
-            SlideViewControllerFlag = 4
-        }
-        else if(indexPath.row == 5)
-        {
-            SlideViewControllerFlag = 5
+            self.present(liveVideoPlayerViewController, animated: true, completion: nil)
         }
         else
         {
+            if(indexPath.row == 0)
+            {
+                SlideViewControllerFlag = 0
+            }
+            else if(indexPath.row == 1)
+            {
+                SlideViewControllerFlag = 1
+            }
+            else if(indexPath.row == 2)
+            {
+                SlideViewControllerFlag = 2
+            }
+                
+            else if(indexPath.row == 4)
+            {
+                SlideViewControllerFlag = 4
+            }
+            else if(indexPath.row == 5)
+            {
+                SlideViewControllerFlag = 5
+            }
+            else if(indexPath.row == 6)
+            {
+                SlideViewControllerFlag = 6
+            }
+            else
+            {
+                
+            }
             
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let slidingViewController = storyboard.instantiateViewController(withIdentifier: "slidingViewController") as! SlidingViewController
+            
+            self.present(slidingViewController, animated: true, completion: nil)
         }
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let slidingViewController = storyboard.instantiateViewController(withIdentifier: "slidingViewController") as! SlidingViewController
-        
-        self.present(slidingViewController, animated: true, completion: nil)
         
     }
     

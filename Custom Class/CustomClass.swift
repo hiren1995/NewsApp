@@ -101,3 +101,27 @@ extension UIView
     }
 }
 
+extension UIViewController
+{
+    func showAlert(Title : String , Message : String)
+    {
+        let alert = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+func DateMeduimFromDate(dateStr : String) -> String
+{
+    let dateFormatterFull = DateFormatter()
+    dateFormatterFull.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    
+    let  dateFull = dateFormatterFull.date(from: dateStr)
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    
+    return dateFormatter.string(from: dateFull!)
+}
+

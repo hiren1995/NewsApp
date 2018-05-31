@@ -12,6 +12,7 @@ class NewsDetailSecondIndexTableViewCell: UITableViewCell {
 
     @IBOutlet var lblNewsTitle: UILabel!
     @IBOutlet var lblNews: UILabel!
+    @IBOutlet var lblDate: UILabel!
     
     
     override func awakeFromNib() {

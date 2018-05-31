@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import MBProgressHUD
+import SDWebImage
 
 class NewsDetailViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
 
     @IBOutlet var NewsDetailTableView: UITableView!
     
-    
+    var newsDetail = JSON()
     
     
     let newstitle = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -45,7 +49,10 @@ class NewsDetailViewController: UIViewController,UITableViewDelegate,UITableView
             
             cell.selectionStyle = .none
             
-            cell.imgNews.image = UIImage(named: "cover_image")
+            //cell.imgNews.image = UIImage(named: "cover_image")
+            
+            cell.imgNews.sd_setImage(with: URL(string: newsDetail["news_image"].stringValue), placeholderImage: UIImage(named: "dummy"))
+            cell.btnPlay.addTarget(self, action: #selector(btnPlay), for: .touchUpInside)
             
             return cell
         }
@@ -55,8 +62,12 @@ class NewsDetailViewController: UIViewController,UITableViewDelegate,UITableView
             
             cell.selectionStyle = .none
             
-            cell.lblNewsTitle.text = newstitle
-            cell.lblNews.text = news
+            //cell.lblNewsTitle.text = newstitle
+            //cell.lblNews.text = news
+            
+            cell.lblNewsTitle.text = newsDetail["news_heading"].stringValue
+            cell.lblNews.text = newsDetail["news_description"].stringValue
+            cell.lblDate.text = DateMeduimFromDate(dateStr: newsDetail["news_date"].stringValue)
             
             return cell
         }
@@ -80,6 +91,14 @@ class NewsDetailViewController: UIViewController,UITableViewDelegate,UITableView
         self.dismiss(animated: true, completion: nil)
     }
     
+    @objc func btnPlay()
+    {
+        let youtubelink = "https://www.youtube.com/watch?v="
+        
+        if let url = URL(string: youtubelink + newsDetail["news_youtube_id"].stringValue ) {
+            UIApplication.shared.openURL(url)
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

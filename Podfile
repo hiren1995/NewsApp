@@ -9,6 +9,11 @@ target 'NewsApp' do
   
   pod 'SlideMenuControllerSwift'
   pod "ROGoogleTranslate"
+  pod 'YouTubePlayer'
+  pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SDWebImage', '~> 4.0'
 
   target 'NewsAppTests' do
     inherit! :search_paths

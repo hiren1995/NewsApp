@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.setStatusBarBackgroundColor = UIColor(red: 213/255, green: 23/255, blue: 30/255, alpha: 1.0)
         
+        if(userDefault.value(forKey: Language) == nil)
+        {
+            userDefault.set("English", forKey: Language)
+            userDefault.set("en", forKey: LanguageCode)
+        }
+       
         return true
     }
 
