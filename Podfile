@@ -14,6 +14,8 @@ target 'NewsApp' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'SDWebImage', '~> 4.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 
   target 'NewsAppTests' do
     inherit! :search_paths

@@ -14,6 +14,11 @@ import SwiftyJSON
 import MBProgressHUD
 import SDWebImage
 
+import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
+
+
 class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate {
     
     @IBOutlet var DashBoardTableView: UITableView!
@@ -34,13 +39,11 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
         DashBoardTableView.delegate = self
         DashBoardTableView.dataSource = self
         
-        
-        loadData()
-        
         // Do any additional setup after loading the view.
     }
+    
     override func viewDidAppear(_ animated: Bool) {
-        //loadData()
+        getToken()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -271,81 +274,101 @@ class DashboardViewController: UIViewController,UITableViewDelegate,UITableViewD
     func loadData()
     {
         
-        let SignupParameters:Parameters = ["device_id": 123,"device_token": 123456 ,"os_type" :  2 ]
-        
-        let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
-        
-        print(SignupParameters)
-        
-        Alamofire.request(signupAPI, method: .post, parameters: SignupParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
-            if(response.result.value != nil)
-            {
-                
-                print(JSON(response.result.value))
-                
-                var tempDict = JSON(response.result.value!)
-                
-                if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+        if(userDefault.value(forKey: DeviceId) == nil)
+        {
+            getToken()
+        }
+        else
+        {
+            let SignupParameters:Parameters = ["device_id": userDefault.value(forKey: DeviceId) as! String,"device_token": userDefault.value(forKey: DeviceToken) as! String ,"os_type" :  2 ]
+            
+            let Spinner = MBProgressHUD.showAdded(to: self.view, animated: true)
+            
+            print(SignupParameters)
+            
+            Alamofire.request(signupAPI, method: .post, parameters: SignupParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                if(response.result.value != nil)
                 {
                     
-                    userDefault.set(tempDict["user_details"][0]["user_id"].intValue , forKey: userId)
-                    userDefault.set(tempDict["user_details"][0]["user_token"].stringValue, forKey: userToken)
+                    print(JSON(response.result.value))
                     
-                    print(userDefault.value(forKey: userId) as! Int)
-                    print(userDefault.value(forKey: userToken) as! String)
+                    var tempDict = JSON(response.result.value!)
                     
-                    
-                    let CategoryParameters:Parameters = ["user_id": userDefault.value(forKey: userId) as! Int  ,"user_token": userDefault.value(forKey: userToken) as! String]
-                    
-                    
-                    print(CategoryParameters)
-                    
-                    Alamofire.request(categoryListAPI, method: .post, parameters: CategoryParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
-                        if(response.result.value != nil)
-                        {
-                            Spinner.hide(animated: true)
-                            
-                            print(JSON(response.result.value))
-                            
-                            self.APIData = JSON(response.result.value!)
-                            
-                            if(self.APIData["status"] == "success" && self.APIData["status_code"].intValue == 1)
+                    if(tempDict["status"] == "success" && tempDict["status_code"].intValue == 1)
+                    {
+                        
+                        userDefault.set(tempDict["user_details"][0]["user_id"].intValue , forKey: userId)
+                        userDefault.set(tempDict["user_details"][0]["user_token"].stringValue, forKey: userToken)
+                        
+                        print(userDefault.value(forKey: userId) as! Int)
+                        print(userDefault.value(forKey: userToken) as! String)
+                        
+                        
+                        let CategoryParameters:Parameters = ["user_id": userDefault.value(forKey: userId) as! Int  ,"user_token": userDefault.value(forKey: userToken) as! String]
+                        
+                        
+                        print(CategoryParameters)
+                        
+                        Alamofire.request(categoryListAPI, method: .post, parameters: CategoryParameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                            if(response.result.value != nil)
                             {
-                                self.DashBoardTableView.reloadData()
+                                Spinner.hide(animated: true)
+                                
+                                print(JSON(response.result.value))
+                                
+                                self.APIData = JSON(response.result.value!)
+                                
+                                if(self.APIData["status"] == "success" && self.APIData["status_code"].intValue == 1)
+                                {
+                                    self.DashBoardTableView.reloadData()
+                                    
+                                }
+                                else
+                                {
+                                    self.showAlert(Title: "Alert", Message: "Something Went Wrong")
+                                }
                                 
                             }
                             else
                             {
+                                Spinner.hide(animated: true)
                                 self.showAlert(Title: "Alert", Message: "Something Went Wrong")
                             }
-                            
-                        }
-                        else
-                        {
-                            Spinner.hide(animated: true)
-                            self.showAlert(Title: "Alert", Message: "Something Went Wrong")
-                        }
-                    })
+                        })
+                        
+                        //let story = UIStoryboard(name: "Main", bundle: nil)
+                        //let x = story.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+                        //x.DashBoardTableView.reloadData()
+                    }
+                        
+                    else
+                    {
+                        self.showAlert(Title: "Alert", Message: "Something Went Wrong while SignUP")
+                    }
                     
-                    //let story = UIStoryboard(name: "Main", bundle: nil)
-                    //let x = story.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
-                    //x.DashBoardTableView.reloadData()
                 }
-                    
                 else
                 {
-                    self.showAlert(Title: "Alert", Message: "Something Went Wrong while SignUP")
+                    
+                    self.showAlert(Title: "Alert", Message: "Something Went Wrong ")
                 }
-                
-            }
-            else
-            {
-                
-                self.showAlert(Title: "Alert", Message: "Something Went Wrong ")
-            }
-        })
+            })
+            
+        }
         
        
+    }
+    
+    func getToken()
+    {
+        if let refreshedToken = InstanceID.instanceID().token(){
+            print("InstanceID token: \(refreshedToken)")
+            
+            userDefault.set(refreshedToken, forKey: DeviceId)
+            userDefault.set(refreshedToken, forKey: DeviceToken)
+            
+            loadData()
+        }
     }
     
     

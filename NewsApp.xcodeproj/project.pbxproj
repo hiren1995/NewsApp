@@ -54,6 +54,7 @@
 		18D1661720B809FF00383706 /* NewsListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D1661520B809FF00383706 /* NewsListCollectionViewCell.xib */; };
 		18D1661C20B814D400383706 /* NewsListSecondIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1661A20B814D400383706 /* NewsListSecondIndexTableViewCell.swift */; };
 		18D1661D20B814D400383706 /* NewsListSecondIndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D1661B20B814D400383706 /* NewsListSecondIndexTableViewCell.xib */; };
+		18D967B320C512D2008CE536 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D967B220C512D2008CE536 /* GoogleService-Info.plist */; };
 		18E905CB20BE6BA400044218 /* ChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E905CA20BE6BA400044218 /* ChangeLanguageViewController.swift */; };
 		18E905CD20BE744100044218 /* ChangeLanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E905CC20BE744100044218 /* ChangeLanguageTableViewCell.swift */; };
 		18E905CF20BE793300044218 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E905CE20BE793300044218 /* Constants.swift */; };
@@ -136,6 +137,7 @@
 		18D1661520B809FF00383706 /* NewsListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListCollectionViewCell.xib; sourceTree = "<group>"; };
 		18D1661A20B814D400383706 /* NewsListSecondIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListSecondIndexTableViewCell.swift; sourceTree = "<group>"; };
 		18D1661B20B814D400383706 /* NewsListSecondIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListSecondIndexTableViewCell.xib; sourceTree = "<group>"; };
+		18D967B220C512D2008CE536 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18E905CA20BE6BA400044218 /* ChangeLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageViewController.swift; sourceTree = "<group>"; };
 		18E905CC20BE744100044218 /* ChangeLanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageTableViewCell.swift; sourceTree = "<group>"; };
 		18E905CE20BE793300044218 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				18C1498D20A16BB4004849DA /* Assets.xcassets */,
 				18C1498F20A16BB4004849DA /* LaunchScreen.storyboard */,
 				18C1499220A16BB4004849DA /* Info.plist */,
+				18D967B220C512D2008CE536 /* GoogleService-Info.plist */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				18C149CA20A17542004849DA /* Ubuntu-M.ttf in Resources */,
 				18C149CB20A17542004849DA /* Ubuntu-MI.ttf in Resources */,
 				18C149CC20A17542004849DA /* Ubuntu-R.ttf in Resources */,
+				18D967B320C512D2008CE536 /* GoogleService-Info.plist in Resources */,
 				18C149CD20A17542004849DA /* Ubuntu-RI.ttf in Resources */,
 				18C149E120A195CA004849DA /* CategoriesTableViewCell.xib in Resources */,
 				18C149CE20A17542004849DA /* UbuntuMono-B.ttf in Resources */,
@@ -510,22 +514,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/ROGoogleTranslate/ROGoogleTranslate.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ROGoogleTranslate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

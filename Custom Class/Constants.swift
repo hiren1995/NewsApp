@@ -24,6 +24,8 @@ let Language = "Language"
 let LanguageCode = "LanguageCode"
 let userId = "userId"
 let userToken = "userToken"
+let DeviceId = "deviceId"
+let DeviceToken = "deviceToken"
 
 
 // API Declarations
